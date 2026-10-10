@@ -1,36 +1,47 @@
-// Botão hamburguer
+// Menu responsivo e navegação acessível
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  menuBtn.classList.toggle("open");
+if (menuBtn && menu) {
+  menuBtn.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("active");
+    menuBtn.classList.toggle("open", isOpen);
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+  });
 
-  // acessibilidade
-  const expanded = menuBtn.getAttribute("aria-expanded") === "true" || false;
-  menuBtn.setAttribute("aria-expanded", !expanded);
-});
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      menuBtn.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Abrir menu");
+    });
+  });
+}
 
-// Destacar link ativo conforme rolagem
+// Sombra no cabeçalho ao rolar a página
+const header = document.querySelector("header");
+if (header) {
+  const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 8);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
+
+// Destaca o item de navegação correspondente à seção visível
 const sections = document.querySelectorAll("main section[id]");
-const navLinks = document.querySelectorAll(".menu a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(sec => {
-    const sectionTop = sec.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      current = sec.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    } else {
-      link.removeAttribute("aria-current");
-    }
-  });
-});
+const navLinks = document.querySelectorAll(".menu a[href^='#']");
+if ("IntersectionObserver" in window && sections.length && navLinks.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => {
+        const active = link.getAttribute("href") === `#${entry.target.id}`;
+        link.classList.toggle("active", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    });
+  }, { rootMargin: "-25% 0px -60% 0px" });
+  sections.forEach((section) => observer.observe(section));
+}

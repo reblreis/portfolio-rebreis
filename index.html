@@ -1,195 +1,177 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Regina Reis</title>
+  <meta name="description" content="Portfólio de Regina Reis: desenvolvimento Salesforce, Java Full Stack e projetos de Inteligência Artificial.">
+  <meta name="theme-color" content="#0a3161">
+  <title>Regina Reis | Salesforce, Java e Inteligência Artificial</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
-    <nav class="container">
-      <h1 class="logo"><a href="index.html">Portfolio</a></h1>
-       <!-- Botão Hamburguer -->
-      <button id="menu-btn" aria-label="Abrir Menu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <nav class="container" aria-label="Navegação principal">
+      <h1 class="logo"><a href="index.html">Regina Reis<span>.</span></a></h1>
+      <button id="menu-btn" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
-      
-      <ul class="menu">
-        <li><a href="#sobre">Sobre Mim</a></li>
+      <ul class="menu" id="menu">
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#experiencias">Experiências</a></li>
         <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#experiencia">Experiência & Formação</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#formacao">Formação</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content container">
-      <div class="hero-text">
-        <h2>Bem-vindo(a) ao meu Portfólio!</h2>
-        <p>Aqui você encontrará um pouco da minha trajetória como desenvolvedora Java e Salesforce. 
-          Conheça meus projetos, experiência e entre em contato comigo.</p>
-        <a href="#projetos" class="btn">Ver Projetos</a>
+  <main>
+    <section class="hero">
+      <div class="hero-content container">
+        <div class="hero-text">
+          <p class="eyebrow">DESENVOLVIMENTO DE SOFTWARE · CRM · IA</p>
+          <h2>Olá, eu sou <span>Regina Reis.</span></h2>
+          <p>Desenvolvedora Salesforce com experiência profissional em soluções para processos de negócio. Também desenvolvo projetos autorais com Java, Spring Boot, Angular e PostgreSQL e estudo aplicações de Inteligência Artificial com Java.</p>
+          <div class="hero-actions">
+            <a href="#projetos" class="btn">Conheça meus projetos <i data-lucide="arrow-down-right"></i></a>
+            <a href="https://linkedin.com/in/reblreis" class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn <i data-lucide="external-link"></i></a>
+          </div>
+          <div class="hero-tags"><span>Salesforce</span><span>Java Full Stack</span><span>IA aplicada</span></div>
+        </div>
+        <div class="hero-img"><img src="img/imagem.png" alt="Ilustração relacionada à tecnologia" width="350" fetchpriority="high"></div>
       </div>
-      <div class="hero-img">
-        <img src="img/imagem.png" alt="Ilustração de tecnologia">
+    </section>
+
+    <section id="sobre" class="about section container">
+      <img src="img/img-004.jpg" alt="Regina em um evento relacionado à Salesforce" loading="lazy">
+      <div class="about-text">
+        <p class="eyebrow">UM POUCO SOBRE MIM</p>
+        <h2>Tecnologia, processos e aprendizado contínuo</h2>
+        <p>Sou <strong>desenvolvedora Salesforce</strong> e bacharel em <strong>Engenharia Civil</strong>. Minha trajetória combina tecnologia, gestão de projetos e entendimento de processos de negócio.</p>
+        <p>Atuei na <strong>NTT DATA Brasil, em projeto para o Itaú</strong>, com desenvolvimento e manutenção de soluções no ecossistema Salesforce. Entre as tecnologias com que trabalho estão Apex, Lightning Web Components (LWC), SOQL e Flow Builder.</p>
+        <p>Em paralelo, construo projetos autorais com <strong>Java, Spring Boot, APIs REST, Angular e PostgreSQL</strong> e venho aprofundando meus estudos em agentes de Inteligência Artificial desenvolvidos com Java.</p>
+        <p>Sou certificada <strong>Salesforce Platform Foundations</strong>, Triple Star Ranger no Trailhead e estou me preparando para a certificação Platform Developer I.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="about">
-    <img src="img/img-004.jpg" alt="Foto de Regina na Salesforce">
-    <div class="about-text">
-      <h2>Sobre Mim</h2>
-      <p>
-        <strong>Desenvolvedora Salesforce</strong> em formação e 
-        <strong>Bacharel em Engenharia Civil</strong>, apaixonada por otimizar processos e gerar valor por meio da tecnologia.
-      </p>
-      <p>
-        Nos últimos dois anos, venho me dedicando intensamente ao estudo de desenvolvimento web com 
-        <strong>Java Full Stack</strong>, além de uma transição acelerada para o ecossistema Salesforce, 
-        com foco em <strong>Apex</strong>, <strong>LWC</strong> e automações com <strong>Flow</strong>.
-      </p>
-      <p>
-        Sou certificada como 
-        <a href="#">Salesforce Certified Platform Foundations</a> (antiga Associate) e estou em fase avançada de preparação para a 
-        <a href="#">Salesforce Certified Platform Developer I</a>. 
-        Busco minha primeira oportunidade como 
-        <strong>Desenvolvedora Salesforce Júnior</strong>, para aplicar meus conhecimentos e contribuir em projetos inovadores, 
-        colaborando com times multidisciplinares e sempre com foco no cliente.
-      </p>
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section id="projetos" class="section container">
-    <h2>Projetos</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Rally Motos</h3>
-        <p>Aplicação Salesforce para gestão de concessionária de motocicletas.</p>
-        <a href="rally-motos.html" class="btn btn-small">Ver Mais</a>
+    <section id="experiencias" class="section section-soft">
+      <div class="container">
+        <p class="eyebrow center">TRAJETÓRIA PROFISSIONAL</p>
+        <h2 class="section-title">Experiências Profissionais</h2>
+        <article class="experience-card">
+          <div class="experience-heading">
+            <div><h3>NTT DATA Brasil · Projeto Itaú</h3><p class="role">Desenvolvedora Salesforce Júnior</p></div>
+            <span class="date-chip">2025–2026</span>
+          </div>
+          <p>Atuação em soluções Salesforce em contexto corporativo, envolvendo desenvolvimento, automação e manutenção de processos de negócio.</p>
+          <div class="tag-list"><span>Apex</span><span>LWC</span><span>SOQL</span><span>Flow Builder</span><span>Testes</span></div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-heading">
+            <div><h3>Engenharia Civil e gestão de projetos</h3><p class="role">Atuação autônoma</p></div>
+            <span class="date-chip">2016–2022</span>
+          </div>
+          <p>Experiência anterior em projetos e processos na área de construção civil, que complementa minha visão de negócio e organização de entregas.</p>
+        </article>
+        <p class="note">As descrições resumem as áreas de atuação. Em entrevistas, detalho atividades e entregas específicas conforme o projeto.</p>
       </div>
-      <div class="card">
-        <h3>Delivery Tech</h3>
-        <p>API REST em Java Spring Boot com autenticação JWT e CRUD completo.</p>
-        <a href="delivery-tech.html" class="btn btn-small">Ver Mais</a>
+    </section>
+
+    <section id="projetos" class="section container">
+      <p class="eyebrow center">PRÁTICA E EVOLUÇÃO TÉCNICA</p>
+      <h2 class="section-title">Projetos em destaque</h2>
+      <p class="section-intro">Projetos autorais e de estudo que demonstram minha prática com plataformas CRM, desenvolvimento Full Stack e aplicações de IA.</p>
+      <div class="cards">
+        <article class="card featured-card">
+          <div class="card-icon"><i data-lucide="cloud"></i></div><span class="project-type">SALESFORCE · PROJETO AUTORAL</span>
+          <h3>HomeForce CRM</h3>
+          <p>Projeto Salesforce para o contexto imobiliário, com modelagem de dados, automações e desenvolvimento com Apex e SOQL. Inclui estudos e implementações com LWC, testes e recursos da plataforma.</p>
+          <div class="tag-list"><span>Apex</span><span>SOQL</span><span>Flow</span><span>LWC</span></div>
+          <a href="homeforce.html" class="text-link">Conhecer projeto <i data-lucide="arrow-up-right"></i></a>
+        </article>
+        <article class="card featured-card">
+          <div class="card-icon"><i data-lucide="layers"></i></div><span class="project-type">JAVA · FULL STACK</span>
+          <h3>ConnectFlow</h3>
+          <p>Aplicação autoral com API REST em Spring Boot, arquitetura em camadas, persistência PostgreSQL com JPA e frontend Angular.</p>
+          <div class="tag-list"><span>Java</span><span>Spring Boot</span><span>Angular</span><span>PostgreSQL</span></div>
+          <a href="connectflow.html" class="text-link">Conhecer projeto <i data-lucide="arrow-up-right"></i></a>
+        </article>
+        <article class="card featured-card">
+          <div class="card-icon"><i data-lucide="bot"></i></div><span class="project-type">JAVA · INTELIGÊNCIA ARTIFICIAL</span>
+          <h3>APIs de Agentes de IA</h3>
+          <p>Projetos de estudo com Java e Spring Boot para explorar orquestração de agentes e recuperação de informações. O escopo de cada recurso é identificado conforme sua implementação.</p>
+          <div class="tag-list"><span>Java</span><span>Spring Boot</span><span>Agentes</span><span>RAG em estudo</span></div>
+          <a href="agentes-ia.html" class="text-link">Conhecer projetos <i data-lucide="arrow-up-right"></i></a>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i data-lucide="building-2"></i></div><span class="project-type">SALESFORCE</span>
+          <h3>CivilForce CRM</h3>
+          <p>Conceito de CRM voltado à construção civil, conectando minha formação em Engenharia Civil à modelagem de dados e aos processos de negócio.</p>
+          <a href="civilforce.html" class="text-link">Ver projeto <i data-lucide="arrow-up-right"></i></a>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i data-lucide="bike"></i></div><span class="project-type">SALESFORCE</span>
+          <h3>Rally Motos</h3>
+          <p>Solução para gestão de concessionária de motocicletas, com objetos personalizados, automações e processos relacionados às vendas.</p>
+          <a href="rally-motos.html" class="text-link">Ver projeto <i data-lucide="arrow-up-right"></i></a>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i data-lucide="truck"></i></div><span class="project-type">JAVA · BACK-END</span>
+          <h3>Delivery Tech</h3>
+          <p>API REST para sistema de entregas, descrita no projeto com Spring Boot, operações CRUD e autenticação JWT.</p>
+          <a href="delivery-tech.html" class="text-link">Ver projeto <i data-lucide="arrow-up-right"></i></a>
+        </article>
       </div>
-      <div class="card">
-        <h3>Outros Estudos</h3>
-        <p>Projetos em LWC, Apex, Angular e integrações REST.</p>
-        <a href="outros-estudos.html" class="btn btn-small">Ver Mais</a>
+      <div class="center more-projects"><a href="outros-estudos.html" class="btn btn-outline-dark">Outros estudos técnicos <i data-lucide="arrow-right"></i></a></div>
+    </section>
+
+    <section id="competencias" class="section section-soft">
+      <div class="container">
+        <p class="eyebrow center">TECNOLOGIAS E FERRAMENTAS</p>
+        <h2 class="section-title">Competências técnicas</h2>
+        <div class="skills-grid">
+          <article class="skill-card"><i data-lucide="cloud"></i><h3>Salesforce</h3><p>Apex, Lightning Web Components (LWC), SOQL, Flow Builder, objetos e campos personalizados, regras de validação, classes de teste e Agentforce em aprendizado.</p></article>
+          <article class="skill-card"><i data-lucide="code-2"></i><h3>Java Full Stack</h3><p>Java 21, Spring Boot, APIs REST, Spring Data JPA, PostgreSQL, Angular, TypeScript, HTML, CSS e Docker em projetos e estudos práticos.</p></article>
+          <article class="skill-card"><i data-lucide="brain-circuit"></i><h3>Inteligência Artificial</h3><p>Estudos de agentes de IA com Java, engenharia de requisitos apoiada por IA e exploração de padrões como RAG conforme o estágio de cada projeto.</p></article>
+          <article class="skill-card"><i data-lucide="workflow"></i><h3>Processos e entrega</h3><p>Modelagem de processos, automação, documentação, testes, análise de requisitos e organização de projetos.</p></article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIÊNCIA -->
-  <section id="experiencia" class="section container">
-    <h2>Experiência & Formação</h2>
-    <div class="timeline">
-
-      <!-- 2025 -->
-      <div class="timeline-item">
-        <span class="year">2025</span>
-        <p>Arquitetura de Sistemas – FAT/SP</p>
-        <p>AgentForce – Training Force – Sottelli</p>
-        <p>Inteligência Artificial – Google Cloud – FAT/SP</p>
+    <section id="formacao" class="section container">
+      <p class="eyebrow center">FORMAÇÃO CONTÍNUA</p>
+      <h2 class="section-title">Formação e certificações</h2>
+      <div class="education-grid">
+        <article class="education-card"><span class="education-label">Certificação Salesforce</span><h3>Salesforce Platform Foundations</h3><p>Certificação conquistada.</p></article>
+        <article class="education-card"><span class="education-label">Em preparação</span><h3>Salesforce Platform Developer I</h3><p>Preparação para a certificação.</p></article>
+        <article class="education-card"><span class="education-label">Trailhead</span><h3>Triple Star Ranger</h3><p>Reconhecimento de progresso na plataforma Trailhead.</p></article>
+        <article class="education-card"><span class="education-label">2026</span><h3>IA e desenvolvimento com Java</h3><p>Formação em arquitetura/agentes de IA com Java e workshop de IA aplicada à Engenharia de Requisitos.</p></article>
+        <article class="education-card"><span class="education-label">Pós-graduação e MBA</span><h3>Gestão e projetos</h3><p>MBA em Gestão de Obras (IPOG) e pós-graduações em áreas de gestão e engenharia urbana.</p></article>
+        <article class="education-card"><span class="education-label">Graduação</span><h3>Engenharia Civil</h3><p>Centro Universitário do Norte – UNINORTE.</p></article>
       </div>
+      <div class="languages"><strong>Idiomas:</strong> Português nativo · Espanhol avançado (DELE C1) · Inglês intermediário</div>
+    </section>
 
-      <!-- 2024 -->
-      <div class="timeline-item">
-        <span class="year">2024</span>
-        <p>Training Force (Sales Cloud) – Sottelli</p>
-        <p>Capacitação Salesforce (Sales/Service Cloud) – LEOO</p>
-        <p>Desenvolvedor Salesforce – FAT/SP</p>
-        <p>Breakfast And Learn Flow 4.0 – Reforce Academy</p>
-        <p>Desenvolvedor Salesforce – SouForce.Cloud</p>
-        <p>Formação Administrador Salesforce – Cloud Camp</p>
-        <p>Programa Training Force – Sotelli</p>
+    <section id="contato" class="contact-section">
+      <div class="container contact-content">
+        <p class="eyebrow">VAMOS CONVERSAR?</p>
+        <h2>Vamos construir algo interessante.</h2>
+        <p>Estou aberta a oportunidades em Salesforce, desenvolvimento de software e soluções tecnológicas.</p>
+        <div class="social">
+          <a href="https://linkedin.com/in/reblreis" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i><span>LinkedIn</span></a>
+          <a href="https://github.com/reblreis" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i><span>GitHub</span></a>
+          <a href="mailto:rebreis@hotmail.com" aria-label="Enviar e-mail"><i data-lucide="mail"></i><span>E-mail</span></a>
+        </div>
       </div>
-
-      <!-- 2023 -->
-      <div class="timeline-item">
-        <span class="year">2023</span>
-        <p>MBA em Gestão de Obras – IPOG</p>
-        <p>Salesforce Certified Platform Foundations (Associate)</p>
-        <p>Cursos em Java, Spring Boot, Salesforce e Arquitetura de Sistemas</p>
-        <p>Breakfast And Learn Flow 3.0 – Reforce Academy</p>
-        <p>Desenvolvimento WEB – HTML e CSS – SouForce.Cloud</p>
-        <p>Web Developer Angular – COTI Informática</p>
-        <p>Java Web Developer – Formação Fullstack – COTI Informática</p>
-      </div>
-
-      <!-- 2022 -->
-      <div class="timeline-item">
-        <span class="year">2022</span>
-        <p>Espanhol Avançado – YES! Idiomas</p>
-        <p>Certificación Español DELE C1 – Instituto Cervantes</p>
-        <p>Lógica de Programação OO + Web – COTI Informática</p>
-        <p>Lógica de Programação – Udemy</p>
-      </div>
-
-      <!-- 2019 -->
-      <div class="timeline-item">
-        <span class="year">2019</span>
-        <p>Pós-Graduação em Gestão de Cidades – UCAM</p>
-      </div>
-
-      <!-- 2015 -->
-      <div class="timeline-item">
-        <span class="year">2015</span>
-        <p><b>Bacharelado em Engenharia Civil</b> – UNINORTE</p>
-      </div>
-
-      <!-- EM ANDAMENTO -->
-      <div class="timeline-item">
-        <span class="year">Em andamento</span>
-        <p>Salesforce Platform Developer I</p>
-        <p>Gestão de Projetos de TI – FAT/SP</p>
-        <p>Inglês Intermediário – CCAA</p>
-      </div>
-      
-    </div>
-  </section>
-
-
-  <!-- CONTATO -->
-  <section id="contato" class="section container">
-    <h2>Contato</h2>
-    <p>Vamos conversar! Me encontre nas redes:</p>
-    <div class="social">
-      <a href="https://linkedin.com/in/reblreis" target="_blank"><i data-lucide="linkedin"></i></a>
-      <a href="https://github.com/reblreis" target="_blank"><i data-lucide="github"></i></a>
-      <a href="mailto:rebreis@hotmail.com"><i data-lucide="mail"></i></a>
-      <script>
-        lucide.createIcons();
-      </script>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Desenvolvido por <b>Regina Reis</b> - Portfólio 2025</p>
-  </footer>
-
-  <script>
-    window.addEventListener("scroll", function() {
-      const header = document.querySelector("header");
-      header.classList.toggle("scrolled", window.scrollY > 0);
-    });
-  </script>
-
+    </section>
+  </main>
+  <footer><p>Desenvolvido por <strong>Regina Reis</strong> · Portfólio 2026</p></footer>
   <script src="js/script.js"></script>
-
+  <script>document.addEventListener("DOMContentLoaded", () => { if (window.lucide) lucide.createIcons(); });</script>
 </body>
 </html>
