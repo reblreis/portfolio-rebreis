@@ -20,7 +20,6 @@ Desenvolvedora Salesforce com experiência profissional na NTT DATA Brasil, em p
 
 - [LinkedIn](https://linkedin.com/in/reblreis)
 - [GitHub](https://github.com/reblreis)
-- E-mail: rebreis@hotmail.com
 
 ## Publicação
 
